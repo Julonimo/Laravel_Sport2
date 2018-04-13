@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class CreatePlayersTable extends Migration
 {
     /**
@@ -18,9 +20,12 @@ class CreatePlayersTable extends Migration
             $table->integer('Player_Nb');
             $table->string('Player_Country');
             $table->integer('Team_Id');
-            $table->integer('Player_Stats_Id');
+            $table->integer('Player_Stat_Id');
         });
     }
+
+
+
     /**
      * Reverse the migrations.
      *
@@ -28,6 +33,6 @@ class CreatePlayersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('players');
+        Schema::dropIfExists('Players');
     }
 }
